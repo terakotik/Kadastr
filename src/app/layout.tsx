@@ -1,7 +1,6 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
-import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'GeoSolutions Pro',
@@ -24,9 +23,6 @@ export default function RootLayout({
       <body className="font-body antialiased">
         {children}
         <Toaster />
-        <div className="fixed bottom-4 right-4 z-50">
-          <Image src="/kk.png" alt="decorative element" width={150} height={150} />
-        </div>
       </body>
     </html>
   );

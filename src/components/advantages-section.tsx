@@ -5,12 +5,12 @@ const advantages = [
   {
     icon: <BadgeCheck className="w-10 h-10 text-primary" />,
     title: "Надёжность",
-    description: "Гарантирую юридическую чистоту и правильность оформления документов."
+    description: "Гарантирую юридическую чистоту и правильность оформления документов."
   },
   {
     icon: <Gauge className="w-10 h-10 text-primary" />,
     title: "Скорость",
-    description: "Оперативная обработка запросов и выполнение работ в сжатые сроки."
+    description: "Оперативная обработка запросов и выполнение работ в сжатые сроки."
   },
   {
     icon: <MapPin className="w-10 h-10 text-primary" />,
@@ -20,7 +20,7 @@ const advantages = [
   {
     icon: <Award className="w-10 h-10 text-primary" />,
     title: "Профессионализм",
-    description: "12-летний опыт и тысячи успешно выполненных проектов."
+    description: "12-летний опыт и тысячи успешно выполненных проектов."
   }
 ];
 
