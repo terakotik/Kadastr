@@ -33,7 +33,7 @@ export default function AboutSection() {
                       alt="Портрет Татьяны Ивановой"
                       width={600}
                       height={700}
-                      data-ai-hint="woman jacket"
+                      data-ai-hint="woman suit"
                       className="object-cover w-full h-full"
                     />
                 </Card>
