@@ -1,3 +1,31 @@
+import Header from '@/components/header';
+import HeroSection from '@/components/hero-section';
+import AboutSection from '@/components/about-section';
+import ServicesSection from '@/components/services-section';
+import DocumentCheckSection from '@/components/document-check-section';
+import ProgressTrackerSection from '@/components/progress-tracker-section';
+import PricesSection from '@/components/prices-section';
+import AdvantagesSection from '@/components/advantages-section';
+import ReviewsSection from '@/components/reviews-section';
+import ContactSection from '@/components/contact-section';
+import Footer from '@/components/footer';
+
 export default function Home() {
-  return <></>;
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-grow">
+        <HeroSection />
+        <AboutSection />
+        <ServicesSection />
+        <DocumentCheckSection />
+        <ProgressTrackerSection />
+        <PricesSection />
+        <AdvantagesSection />
+        <ReviewsSection />
+        <ContactSection />
+      </main>
+      <Footer />
+    </div>
+  );
 }
