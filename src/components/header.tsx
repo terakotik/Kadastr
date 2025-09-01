@@ -38,11 +38,14 @@ export default function Header() {
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between">
-        <Link href="#home" className="flex items-center gap-2">
-          <LandPlot className="h-8 w-8 text-primary" />
-          <span className="text-xl font-bold font-headline text-foreground">
-            Татьяна Иванова
-          </span>
+        <Link href="#home" className="flex items-center gap-3">
+          <LandPlot className="h-10 w-10 text-primary" />
+          <div>
+            <span className="text-xl font-bold font-headline text-foreground leading-tight">
+              Татьяна Иванова
+            </span>
+            <p className="text-xs text-muted-foreground">Кадастровый инженер</p>
+          </div>
         </Link>
         <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (

@@ -7,11 +7,14 @@ export default function Footer() {
       <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
-            <Link href="#home" className="flex items-center gap-2">
-              <LandPlot className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold font-headline text-foreground">
-                Татьяна Иванова
-              </span>
+            <Link href="#home" className="flex items-center gap-3">
+               <LandPlot className="h-10 w-10 text-primary" />
+                <div>
+                    <span className="text-xl font-bold font-headline text-foreground leading-tight">
+                        Татьяна Иванова
+                    </span>
+                    <p className="text-xs text-muted-foreground">Кадастровый инженер</p>
+                </div>
             </Link>
             <p className="text-sm text-muted-foreground">
               Ваш надёжный кадастровый инженер.
