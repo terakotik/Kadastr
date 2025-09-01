@@ -40,11 +40,11 @@ export default function ProgressTrackerSection() {
           </p>
         </div>
         <div className="relative">
-          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2"></div>
-          <div className="relative grid md:grid-cols-5 gap-8">
+          <div className="hidden md:flex absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2"></div>
+          <div className="grid md:grid-cols-5 gap-8">
             {steps.map((step, index) => (
-              <div key={index} className="relative flex flex-col items-center text-center">
-                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary border-4 border-secondary z-10"></div>
+              <div key={index} className="relative flex flex-col items-center text-center p-4">
+                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary border-4 border-secondary z-10 hidden md:block"></div>
                  <div className="p-4 bg-background rounded-full border mb-4 z-20">
                     {step.icon}
                  </div>
