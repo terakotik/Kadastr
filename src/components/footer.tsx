@@ -10,11 +10,11 @@ export default function Footer() {
             <Link href="#home" className="flex items-center gap-2">
               <LandPlot className="h-8 w-8 text-primary" />
               <span className="text-xl font-bold font-headline text-foreground">
-                GeoSolutions Pro
+                Татьяна Иванова
               </span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Татьяна Иванова — Ваш надёжный кадастровый инженер.
+              Ваш надёжный кадастровый инженер.
             </p>
           </div>
           
@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
         
         <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} GeoSolutions Pro. Все права защищены.</p>
+          <p>&copy; {new Date().getFullYear()} Татьяна Иванова. Все права защищены.</p>
           <div className="flex gap-4 mt-4 sm:mt-0">
             <Link href="#" className="hover:text-primary">Политика конфиденциальности</Link>
             <Link href="#" className="hover:text-primary">Условия использования</Link>

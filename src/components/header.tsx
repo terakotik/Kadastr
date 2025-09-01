@@ -10,7 +10,6 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { href: "#about", label: "Обо мне" },
   { href: "#services", label: "Услуги" },
-  { href: "#ai-check", label: "AI-Проверка" },
   { href: "#progress", label: "Процесс" },
   { href: "#prices", label: "Прайс-лист" },
   { href: "#reviews", label: "Отзывы" },
@@ -42,7 +41,7 @@ export default function Header() {
         <Link href="#home" className="flex items-center gap-2">
           <LandPlot className="h-8 w-8 text-primary" />
           <span className="text-xl font-bold font-headline text-foreground">
-            GeoSolutions Pro
+            Татьяна Иванова
           </span>
         </Link>
         <nav className="hidden lg:flex items-center gap-6">
