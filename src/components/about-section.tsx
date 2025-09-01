@@ -27,9 +27,9 @@ export default function AboutSection() {
                  </div>
             </div>
              <div className="order-1 lg:order-2">
-                <Card className="overflow-hidden">
+                <Card className="overflow-hidden bg-transparent border-0">
                     <Image
-                      src="https://picsum.photos/600/700"
+                      src="https://sora.chatgpt.com/g/gen_01k439yx9ze78v3fsez7hqazx8"
                       alt="Портрет Татьяны Ивановой"
                       width={600}
                       height={700}
