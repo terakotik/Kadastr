@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 
 export default function AboutSection() {
   return (
@@ -27,7 +27,7 @@ export default function AboutSection() {
                  </div>
             </div>
              <div className="order-1 lg:order-2">
-                <Card className="overflow-hidden bg-transparent border-0">
+                <Card className="overflow-hidden shadow-2xl">
                     <Image
                       src="https://sora.chatgpt.com/g/gen_01k439yx9ze78v3fsez7hqazx8"
                       alt="Портрет Татьяны Ивановой"
