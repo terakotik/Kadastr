@@ -27,13 +27,13 @@ export default function AboutSection() {
                  </div>
             </div>
              <div className="order-1 lg:order-2">
-                <Card className="overflow-hidden shadow-xl">
+                <Card className="overflow-hidden">
                     <Image
                       src="https://picsum.photos/600/700"
                       alt="Портрет Татьяны Ивановой"
                       width={600}
                       height={700}
-                      data-ai-hint="professional woman portrait"
+                      data-ai-hint="woman jacket"
                       className="object-cover w-full h-full"
                     />
                 </Card>
