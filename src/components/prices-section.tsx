@@ -4,12 +4,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Clock } from "lucide-react";
 
 const priceItems = [
   {
     title: "Межевание земельного участка",
     price: "от 12 000 ₽",
+    duration: "от 15 дней",
     details: [
       "Выезд кадастрового инженера на объект",
       "Подготовка межевого плана",
@@ -20,6 +21,7 @@ const priceItems = [
   {
     title: "Технический план",
     price: "от 8 000 ₽",
+    duration: "от 10 дней",
     details: [
       "Измерение параметров объекта на месте",
       "Подготовка техплана для регистрации прав",
@@ -29,6 +31,7 @@ const priceItems = [
   {
     title: "Акт обследования",
     price: "от 5 000 ₽",
+    duration: "от 5 дней",
     details: [
       "Выезд специалиста для осмотра объекта",
       "Подготовка акта для снятия с учёта",
@@ -53,9 +56,22 @@ export default function PricesSection() {
               <AccordionItem key={index} value={`item-${index}`} className="bg-background border rounded-lg shadow-sm">
                 <AccordionTrigger className="p-6 text-lg hover:no-underline">
                   <span className="font-bold text-left">{item.title}</span>
-                  <span className="font-bold text-primary ml-auto text-xl whitespace-nowrap pl-4">{item.price}</span>
+                  <div className="flex items-center ml-auto pl-4">
+                     <div className="text-right mr-4 hidden sm:block">
+                        <div className="font-bold text-primary text-xl">{item.price}</div>
+                        <div className="text-sm text-muted-foreground flex items-center justify-end">
+                            <Clock className="w-4 h-4 mr-1.5"/>
+                            {item.duration}
+                        </div>
+                     </div>
+                  </div>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-6">
+                  <div className="sm:hidden text-lg font-bold text-primary mb-4">{item.price}</div>
+                   <div className="sm:hidden text-sm text-muted-foreground flex items-center mb-4">
+                        <Clock className="w-4 h-4 mr-1.5"/>
+                        {item.duration}
+                    </div>
                   <ul className="space-y-3 text-muted-foreground">
                     {item.details.map((detail, i) => (
                       <li key={i} className="flex items-center">
