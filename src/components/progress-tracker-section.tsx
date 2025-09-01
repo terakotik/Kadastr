@@ -1,5 +1,4 @@
 import { FileText, Search, DraftingCompass, Landmark, CheckCircle } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 
 const steps = [
   {
@@ -39,20 +38,16 @@ export default function ProgressTrackerSection() {
             Мы придерживаемся прозрачного и понятного процесса, чтобы вы всегда были в курсе, на каком этапе находится ваш проект.
           </p>
         </div>
-        <div className="relative">
-          <div className="hidden md:flex absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2"></div>
-          <div className="grid md:grid-cols-5 gap-8">
-            {steps.map((step, index) => (
-              <div key={index} className="relative flex flex-col items-center text-center p-4">
-                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary border-4 border-secondary z-10 hidden md:block"></div>
-                 <div className="p-4 bg-background rounded-full border mb-4 z-20">
-                    {step.icon}
-                 </div>
-                 <h3 className="font-bold text-lg mb-1">{step.title}</h3>
-                 <p className="text-muted-foreground text-sm">{step.description}</p>
-              </div>
-            ))}
-          </div>
+        <div className="grid md:grid-cols-5 gap-8">
+          {steps.map((step, index) => (
+            <div key={index} className="flex flex-col items-center text-center p-4">
+               <div className="flex items-center justify-center bg-background rounded-full h-20 w-20 border-4 border-primary/20 mb-4">
+                  {step.icon}
+               </div>
+               <h3 className="font-bold text-lg mb-1">{step.title}</h3>
+               <p className="text-muted-foreground text-sm">{step.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
