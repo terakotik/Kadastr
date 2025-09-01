@@ -42,18 +42,18 @@ const priceItems = [
 
 export default function PricesSection() {
   return (
-    <section id="prices" className="py-20 lg:py-32 bg-secondary">
+    <section id="prices" className="py-20 lg:py-32 bg-background border-t border-dashed">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">Прайс-лист</h2>
           <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-            Прозрачное ценообразование без скрытых платежей.
+            Прозрачное ценообразование без скрытых платежей.
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="w-full space-y-4">
             {priceItems.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="bg-background border rounded-lg shadow-sm">
+              <AccordionItem key={index} value={`item-${index}`} className="bg-secondary/30 border rounded-lg shadow-sm">
                 <AccordionTrigger className="p-6 text-lg hover:no-underline">
                   <span className="font-bold text-left">{item.title}</span>
                   <div className="flex items-center ml-auto pl-4">
