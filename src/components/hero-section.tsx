@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative bg-background overflow-hidden">
        <Image
-        src="https://optim.tildacdn.com/tild3163-3132-4761-a438-643137643233/-/format/webp/simetra____.jpg.webp"
+        src="https://buroburo.ru/upload/iblock/935/93588be0eb7ea81176bc13fee7190704.jpg"
         alt="Кадастровые работы"
         fill
         className="object-cover object-center z-0"
