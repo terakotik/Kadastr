@@ -4,7 +4,14 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative bg-secondary overflow-hidden">
+    <section id="home" className="relative bg-background overflow-hidden">
+       <Image
+        src="https://optim.tildacdn.com/tild3163-3132-4761-a438-643137643233/-/format/webp/simetra____.jpg.webp"
+        alt="Кадастровые работы"
+        fill
+        className="object-cover object-center z-0"
+        data-ai-hint="map blueprint"
+      />
       <div className="absolute inset-0 bg-background/60 backdrop-blur-sm"></div>
       <div className="container mx-auto min-h-[calc(100vh-80px)] flex items-center justify-center py-20 md:py-32 relative z-10">
         <div className="text-center">
