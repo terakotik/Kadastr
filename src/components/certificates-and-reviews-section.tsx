@@ -93,7 +93,7 @@ export default function CertificatesAndReviewsSection() {
                            width={400}
                            height={560}
                            data-ai-hint="document certificate"
-                           className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                           className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300"
                          />
                        </div>
                        <CardFooter className="p-4 bg-background/50 border-t mt-auto">
