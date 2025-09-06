@@ -86,12 +86,6 @@ export default function Header() {
                       <p className="text-xs text-muted-foreground">Кадастровый инженер</p>
                     </div>
                   </Link>
-                  <SheetClose asChild>
-                     <Button variant="ghost" size="icon">
-                       <X className="h-6 w-6" />
-                       <span className="sr-only">Закрыть меню</span>
-                     </Button>
-                  </SheetClose>
                </div>
               <nav className="flex flex-col flex-grow justify-center items-center gap-6 text-center">
                 {navLinks.map((link) => (
