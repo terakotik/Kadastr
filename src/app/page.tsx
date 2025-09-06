@@ -5,7 +5,7 @@ import ServicesSection from '@/components/services-section';
 import ProgressTrackerSection from '@/components/progress-tracker-section';
 import PricesSection from '@/components/prices-section';
 import AdvantagesSection from '@/components/advantages-section';
-import ReviewsSection from '@/components/reviews-section';
+import CertificatesAndReviewsSection from '@/components/certificates-and-reviews-section';
 import ContactSection from '@/components/contact-section';
 import Footer from '@/components/footer';
 
@@ -20,7 +20,7 @@ export default function Home() {
         <ProgressTrackerSection />
         <PricesSection />
         <AdvantagesSection />
-        <ReviewsSection />
+        <CertificatesAndReviewsSection />
         <ContactSection />
       </main>
       <Footer />
