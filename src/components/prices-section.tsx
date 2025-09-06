@@ -75,7 +75,7 @@ export default function PricesSection() {
                   <ul className="space-y-3 text-muted-foreground">
                     {item.details.map((detail, i) => (
                       <li key={i} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-accent mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-600 mr-3 flex-shrink-0" />
                         <span>{detail}</span>
                       </li>
                     ))}

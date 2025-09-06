@@ -77,7 +77,7 @@ export default function ContactSection() {
                  <ul className="mt-8 space-y-4 max-w-md mx-auto lg:mx-0">
                      {benefits.map((benefit, index) => (
                         <li key={index} className="flex items-center gap-3 text-left">
-                            <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
+                            <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
                             <span className="font-medium">{benefit.text}</span>
                         </li>
                      ))}
