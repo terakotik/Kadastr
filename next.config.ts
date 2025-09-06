@@ -52,6 +52,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'http',
+        hostname: 'egrnkadastr.ru',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
 };

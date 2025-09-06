@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
@@ -18,10 +18,32 @@ const reviews = [
   }
 ];
 
-const diplomas = Array(6).fill({
-    src: "https://picsum.photos/400/560",
-    alt: "Документ"
-});
+const diplomas = [
+    {
+      src: "http://egrnkadastr.ru/d/d1.jpg",
+      alt: "Квалификационный аттестат кадастрового инженера"
+    },
+    {
+      src: "http://egrnkadastr.ru/d/d2.jpg",
+      alt: "Членство в СРО"
+    },
+    {
+      src: "http://egrnkadastr.ru/d/d3.jpg",
+      alt: "Диплом о высшем образовании"
+    },
+    {
+      src: "http://egrnkadastr.ru/d/d4.jpg",
+      alt: "Уведомление о включении в реестр"
+    },
+    {
+      src: "http://egrnkadastr.ru/d/d5.jpg",
+      alt: "Сертификат соответствия"
+    },
+    {
+      src: "http://egrnkadastr.ru/d/d6.jpg",
+      alt: "Свидетельство о повышении квалификации"
+    }
+];
 
 export default function CertificatesAndReviewsSection() {
   return (
@@ -36,7 +58,7 @@ export default function CertificatesAndReviewsSection() {
         <Tabs defaultValue="reviews" className="max-w-6xl mx-auto">
           <TabsList className="grid w-full grid-cols-2 max-w-sm mx-auto h-12">
             <TabsTrigger value="reviews" className="text-lg">Отзывы</TabsTrigger>
-            <TabsTrigger value="diplomas" className="text-lg">Документы</TabsTrigger>
+            <TabsTrigger value="documents" className="text-lg">Документы</TabsTrigger>
           </TabsList>
           <TabsContent value="reviews" className="mt-8">
             <div className="grid md:grid-cols-2 gap-8">
@@ -60,18 +82,23 @@ export default function CertificatesAndReviewsSection() {
               ))}
             </div>
           </TabsContent>
-          <TabsContent value="diplomas" className="mt-8">
+          <TabsContent value="documents" className="mt-8">
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {diplomas.map((diploma, index) => (
-                    <Card key={index} className="overflow-hidden group">
-                       <Image
-                         src={`${diploma.src}?random=${index}`}
-                         alt={`${diploma.alt} ${index + 1}`}
-                         width={400}
-                         height={560}
-                         data-ai-hint="document certificate"
-                         className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                       />
+                    <Card key={index} className="overflow-hidden group flex flex-col">
+                       <div className="aspect-[4/5.6] w-full overflow-hidden">
+                         <Image
+                           src={diploma.src}
+                           alt={diploma.alt}
+                           width={400}
+                           height={560}
+                           data-ai-hint="document certificate"
+                           className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                         />
+                       </div>
+                       <CardFooter className="p-4 bg-background/50 border-t mt-auto">
+                          <p className="text-sm font-medium text-center w-full">{diploma.alt}</p>
+                       </CardFooter>
                     </Card>
                 ))}
             </div>
