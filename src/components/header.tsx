@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import AnimatedLogo from "./animated-logo";
 
@@ -75,28 +75,57 @@ export default function Header() {
                 <span className="sr-only">Открыть меню</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col h-full justify-center items-center gap-8">
+            <SheetContent side="right" className="w-full h-full bg-background p-0 flex flex-col">
+               <div className="p-4 flex justify-between items-center border-b">
+                 <Link href="#home" className="flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
+                    <AnimatedLogo className="h-10 w-10" />
+                    <div>
+                      <span className="text-lg font-bold font-headline text-foreground leading-tight">
+                        Татьяна Иванова
+                      </span>
+                      <p className="text-xs text-muted-foreground">Кадастровый инженер</p>
+                    </div>
+                  </Link>
+                  <SheetClose asChild>
+                     <Button variant="ghost" size="icon">
+                       <X className="h-6 w-6" />
+                       <span className="sr-only">Закрыть меню</span>
+                     </Button>
+                  </SheetClose>
+               </div>
+              <nav className="flex flex-col flex-grow justify-center items-center gap-6 text-center">
                 {navLinks.map((link) => (
                    <SheetClose asChild key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-2xl font-headline text-foreground transition-colors hover:text-primary"
+                      className="text-3xl font-headline text-foreground transition-colors hover:text-primary"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {link.label}
                     </Link>
                   </SheetClose>
                 ))}
-                 <SheetClose asChild>
-                  <Button asChild size="lg" className="mt-8">
-                     <Link href="#contacts" onClick={() => setIsMobileMenuOpen(false)}>
-                        <Phone className="mr-2 h-5 w-5" />
-                        Связаться
-                     </Link>
-                  </Button>
-                 </SheetClose>
               </nav>
+              <div className="p-4 border-t text-center">
+                 <SheetClose asChild>
+                    <Button asChild size="lg" className="w-full max-w-sm mx-auto mb-4">
+                       <Link href="#contacts" onClick={() => setIsMobileMenuOpen(false)}>
+                          <Phone className="mr-2 h-5 w-5" />
+                          Оставить заявку
+                       </Link>
+                    </Button>
+                 </SheetClose>
+                 <div className="text-sm text-muted-foreground space-y-2">
+                    <a href="tel:+79119448000" className="flex items-center justify-center gap-2 hover:text-primary">
+                        <Phone className="w-4 h-4"/>
+                        +7 911 944 8000
+                    </a>
+                     <a href="mailto:info@geosolutions.pro" className="flex items-center justify-center gap-2 hover:text-primary">
+                        <Mail className="w-4 h-4"/>
+                        info@geosolutions.pro
+                    </a>
+                 </div>
+              </div>
             </SheetContent>
           </Sheet>
         </div>
