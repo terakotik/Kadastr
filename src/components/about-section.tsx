@@ -25,17 +25,14 @@ export default function AboutSection() {
                     </div>
                  </div>
             </div>
-             <div className="order-1 lg:order-2 flex flex-col justify-end h-full">
-                <Card className="overflow-hidden bg-transparent border-0 shadow-none">
-                    <Image
-                      src="https://picsum.photos/600/700"
-                      alt="Портрет Татьяны Ивановой"
-                      width={600}
-                      height={700}
-                      data-ai-hint="woman suit"
-                      className="object-cover w-full h-full"
-                    />
-                </Card>
+             <div className="order-1 lg:order-2 relative h-[600px]">
+                <Image
+                  src="http://egrnkadastr.ru/d/t.webp"
+                  alt="Кадастровая карта"
+                  fill
+                  data-ai-hint="map blueprint"
+                  className="object-contain object-bottom"
+                />
             </div>
         </div>
       </div>
