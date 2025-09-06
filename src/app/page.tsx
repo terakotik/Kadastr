@@ -8,7 +8,6 @@ import AdvantagesSection from '@/components/advantages-section';
 import CertificatesAndReviewsSection from '@/components/certificates-and-reviews-section';
 import ContactSection from '@/components/contact-section';
 import Footer from '@/components/footer';
-import DocumentCheckSection from '@/components/document-check-section';
 
 
 export default function Home() {
@@ -22,7 +21,6 @@ export default function Home() {
         <ProgressTrackerSection />
         <PricesSection />
         <AdvantagesSection />
-        <DocumentCheckSection />
         <CertificatesAndReviewsSection />
         <ContactSection />
       </main>

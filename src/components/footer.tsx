@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import AnimatedLogo from "./AnimatedLogo";
 
 export default function Footer() {
   const [isMapVisible, setIsMapVisible] = useState(false);
@@ -15,11 +16,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <Link href="#home" className="flex items-center gap-3">
-               <svg width="48" height="48" viewBox="0 0 100 100">
-                    <rect x="5" y="5" width="90" height="90" fill="none" stroke="#4285F4" strokeWidth="6"></rect>
-                    <rect x="20" y="20" width="60" height="60" fill="none" stroke="#ef4444" strokeWidth="8"></rect>
-                    <circle cx="50" cy="50" r="5" fill="#ef4444"></circle>
-                </svg>
+               <AnimatedLogo />
                 <div>
                     <span className="text-xl font-bold font-headline text-foreground leading-tight">
                         Татьяна Иванова

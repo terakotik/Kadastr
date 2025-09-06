@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
+import AnimatedLogo from "./AnimatedLogo";
 
 const navLinks = [
   { href: "#about", label: "Обо мне" },
@@ -39,11 +40,7 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between">
         <Link href="#home" className="flex items-center gap-3">
-            <svg width="48" height="48" viewBox="0 0 100 100">
-                <rect x="5" y="5" width="90" height="90" fill="none" stroke="#4285F4" strokeWidth="6"></rect>
-                <rect x="20" y="20" width="60" height="60" fill="none" stroke="#ef4444" strokeWidth="8"></rect>
-                <circle cx="50" cy="50" r="5" fill="#ef4444"></circle>
-            </svg>
+            <AnimatedLogo />
           <div>
             <span className="text-xl font-bold font-headline text-foreground leading-tight">
               Татьяна Иванова
