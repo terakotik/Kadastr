@@ -26,7 +26,7 @@ export default function AboutSection() {
                  </div>
             </div>
              <div className="order-1 lg:order-2 relative h-[600px] overflow-hidden lg:overflow-visible">
-                <div className="absolute inset-0 lg:transform lg:translate-y-[125px]">
+                <div className="absolute inset-0 lg:transform lg:translate-y-[128px]">
                     <Image
                       src="http://egrnkadastr.ru/d/t.webp"
                       alt="Кадастровая карта"
