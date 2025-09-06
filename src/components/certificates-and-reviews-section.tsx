@@ -20,7 +20,7 @@ const reviews = [
 
 const diplomas = Array(6).fill({
     src: "https://picsum.photos/400/560",
-    alt: "Диплом или сертификат"
+    alt: "Документ"
 });
 
 export default function CertificatesAndReviewsSection() {
@@ -36,7 +36,7 @@ export default function CertificatesAndReviewsSection() {
         <Tabs defaultValue="reviews" className="max-w-6xl mx-auto">
           <TabsList className="grid w-full grid-cols-2 max-w-sm mx-auto h-12">
             <TabsTrigger value="reviews" className="text-lg">Отзывы</TabsTrigger>
-            <TabsTrigger value="diplomas" className="text-lg">Дипломы и сертификаты</TabsTrigger>
+            <TabsTrigger value="diplomas" className="text-lg">Документы</TabsTrigger>
           </TabsList>
           <TabsContent value="reviews" className="mt-8">
             <div className="grid md:grid-cols-2 gap-8">
