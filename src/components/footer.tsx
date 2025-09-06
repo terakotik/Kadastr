@@ -55,7 +55,6 @@ export default function Footer() {
           <p>&copy; {new Date().getFullYear()} Татьяна Иванова. Все права защищены.</p>
           <div className="flex gap-4 mt-4 sm:mt-0">
             <Link href="/privacy-policy" className="hover:text-primary">Политика конфиденциальности</Link>
-            <Link href="#" className="hover:text-primary">Условия использования</Link>
           </div>
         </div>
       </div>
