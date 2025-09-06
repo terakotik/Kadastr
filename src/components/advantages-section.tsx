@@ -29,7 +29,7 @@ const advantages = [
   {
     icon: <Award className="w-10 h-10 text-primary" />,
     title: "Профессионализм",
-    description: "12-летний опыт и тысячи успешно выполненных проектов."
+    description: "15-летний опыт и тысячи успешно выполненных проектов."
   }
 ];
 
