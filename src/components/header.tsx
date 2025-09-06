@@ -4,8 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
-import { Menu, X, Phone, LandPlot } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import AnimatedLogo from "./animated-logo";
 
 const navLinks = [
   { href: "#about", label: "Обо мне" },
@@ -39,7 +40,7 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between">
         <Link href="#home" className="flex items-center gap-3">
-          <LandPlot className="h-10 w-10 text-primary" />
+          <AnimatedLogo className="h-12 w-12" />
           <div>
             <span className="text-xl font-bold font-headline text-foreground leading-tight">
               Татьяна Иванова

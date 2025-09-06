@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { LandPlot, Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
+import AnimatedLogo from "./animated-logo";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <Link href="#home" className="flex items-center gap-3">
-               <LandPlot className="h-10 w-10 text-primary" />
+               <AnimatedLogo className="h-12 w-12" />
                 <div>
                     <span className="text-xl font-bold font-headline text-foreground leading-tight">
                         Татьяна Иванова
