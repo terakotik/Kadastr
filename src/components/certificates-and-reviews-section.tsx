@@ -86,12 +86,12 @@ export default function CertificatesAndReviewsSection() {
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {diplomas.map((diploma, index) => (
                     <Card key={index} className="overflow-hidden group flex flex-col">
-                       <div className="aspect-[4/5.6] w-full overflow-hidden">
+                       <div className="aspect-video w-full overflow-hidden">
                          <Image
                            src={diploma.src}
                            alt={diploma.alt}
-                           width={400}
-                           height={560}
+                           width={560}
+                           height={400}
                            data-ai-hint="document certificate"
                            className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300"
                          />
