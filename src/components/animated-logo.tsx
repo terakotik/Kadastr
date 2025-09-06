@@ -15,12 +15,12 @@ const AnimatedLogo = ({ className }: { className?: string }) => {
       <style jsx>{`
         .square {
             fill: none;
-            stroke: #374151; /* text-gray-700 */
+            stroke: #1f2937;
             stroke-width: 6;
             transition: stroke 0.5s ease-in-out;
         }
         .dot {
-            fill: #dc2626; /* red-600 */
+            fill: #ef4444;
             transition: all 0.5s ease-in-out;
             transform-origin: 50% 50%;
             animation-fill-mode: forwards;
@@ -33,10 +33,10 @@ const AnimatedLogo = ({ className }: { className?: string }) => {
         .dot:nth-child(5) { transform: translate(0, 0); }
 
         #animated-logo.active .square {
-            stroke: #1e40af; /* blue-800 */
+            stroke: #1f2937;
         }
         #animated-logo.active .dot {
-            fill: #1e40af; /* blue-800 */
+            fill: #1f2937;
             transition: all 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
         }
         
