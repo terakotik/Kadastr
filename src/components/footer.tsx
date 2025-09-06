@@ -54,7 +54,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Татьяна Иванова. Все права защищены.</p>
           <div className="flex gap-4 mt-4 sm:mt-0">
-            <Link href="#" className="hover:text-primary">Политика конфиденциальности</Link>
+            <Link href="/privacy-policy" className="hover:text-primary">Политика конфиденциальности</Link>
             <Link href="#" className="hover:text-primary">Условия использования</Link>
           </div>
         </div>

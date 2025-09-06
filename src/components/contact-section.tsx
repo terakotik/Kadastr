@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
+import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -10,6 +11,7 @@ import {
   FormControl,
   FormField,
   FormItem,
+  FormLabel,
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
@@ -18,6 +20,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useToast } from "@/hooks/use-toast"
 import { Loader2, CheckCircle, Send } from "lucide-react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Checkbox } from "@/components/ui/checkbox"
 
 const services = [
   "Межевание земельных участков",
@@ -33,6 +36,9 @@ const formSchema = z.object({
   phone: z.string().min(10, "Введите корректный номер телефона."),
   service: z.string().optional(),
   message: z.string().min(5, "Пожалуйста, опишите вашу задачу подробнее.").optional().or(z.literal('')),
+  privacyPolicy: z.boolean().default(true).refine(value => value === true, {
+    message: "Вы должны согласиться с политикой конфиденциальности.",
+  }),
 })
 
 const benefits = [
@@ -50,6 +56,7 @@ export default function ContactSection() {
       phone: "",
       service: "",
       message: "",
+      privacyPolicy: true,
     },
   })
 
@@ -149,6 +156,26 @@ export default function ContactSection() {
                           </FormItem>
                         )}
                       />
+                      <FormField
+                          control={form.control}
+                          name="privacyPolicy"
+                          render={({ field }) => (
+                            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md py-2">
+                              <FormControl>
+                                <Checkbox
+                                  checked={field.value}
+                                  onCheckedChange={field.onChange}
+                                />
+                              </FormControl>
+                              <div className="space-y-1 leading-none">
+                                <FormLabel className="text-sm font-normal text-muted-foreground">
+                                  Я даю согласие на обработку персональных данных в соответствии с <Link href="/privacy-policy" className="underline hover:text-primary" target="_blank">Политикой конфиденциальности</Link>.
+                                </FormLabel>
+                                <FormMessage />
+                              </div>
+                            </FormItem>
+                          )}
+                        />
                       <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
                         {isSubmitting ? (
                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
