@@ -28,7 +28,7 @@ export default function AboutSection() {
              <div className="order-1 lg:order-2">
                 <Card className="overflow-hidden bg-transparent border-0 shadow-none">
                     <Image
-                      src="/kk.png"
+                      src="https://picsum.photos/600/700"
                       alt="Портрет Татьяны Ивановой"
                       width={600}
                       height={700}
