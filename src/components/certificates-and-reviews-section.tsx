@@ -21,27 +21,27 @@ const reviews = [
 const diplomas = [
     {
       src: "http://egrnkadastr.ru/d/d1.jpg",
-      alt: "Квалификационный аттестат кадастрового инженера"
+      alt: "Свидетельство и диплом"
     },
     {
       src: "http://egrnkadastr.ru/d/d2.jpg",
-      alt: "Членство в СРО"
+      alt: "Удостоверение"
     },
     {
       src: "http://egrnkadastr.ru/d/d3.jpg",
-      alt: "Диплом о высшем образовании"
+      alt: "Диплом"
     },
     {
       src: "http://egrnkadastr.ru/d/d4.jpg",
-      alt: "Уведомление о включении в реестр"
+      alt: "Диплом"
     },
     {
       src: "http://egrnkadastr.ru/d/d5.jpg",
-      alt: "Сертификат соответствия"
+      alt: "Диплом"
     },
     {
       src: "http://egrnkadastr.ru/d/d6.jpg",
-      alt: "Свидетельство о повышении квалификации"
+      alt: "Диплом"
     }
 ];
 
