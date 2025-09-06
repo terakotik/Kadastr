@@ -18,7 +18,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useToast } from "@/hooks/use-toast"
-import { Loader2, CheckCircle, Send } from "lucide-react"
+import { Loader2, CheckCircle, Send, MapPin } from "lucide-react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
 
@@ -186,6 +186,12 @@ export default function ContactSection() {
                       </Button>
                     </form>
                   </Form>
+                  <Button asChild variant="outline" className="w-full mt-4 md:hidden">
+                    <Link href="https://maps.app.goo.gl/JAH5HYs9MBh74Wk6A" target="_blank">
+                       <MapPin className="mr-2 h-4 w-4" />
+                        Карта
+                    </Link>
+                  </Button>
                 </CardContent>
             </Card>
         </div>
