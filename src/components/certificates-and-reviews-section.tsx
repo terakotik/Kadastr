@@ -91,9 +91,9 @@ export default function CertificatesAndReviewsSection() {
                            src={diploma.src}
                            alt={diploma.alt}
                            width={560}
-                           height={400}
+                           height={315}
                            data-ai-hint="document certificate"
-                           className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300"
+                           className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                          />
                        </div>
                        <CardFooter className="p-4 bg-background/50 border-t mt-auto">
