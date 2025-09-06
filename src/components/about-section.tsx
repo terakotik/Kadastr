@@ -5,7 +5,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-20 lg:py-32 bg-secondary">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-end">
             <div className="order-2 lg:order-1">
                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Татьяна Иванова — ваш <span className="text-primary">надёжный партнёр</span> в мире кадастра</h2>
                  <p className="text-muted-foreground mb-4">
