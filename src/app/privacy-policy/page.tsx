@@ -88,7 +88,7 @@ export default function PrivacyPolicyPage() {
                  <ul className="list-none pl-0">
                     <li><strong>Телефон:</strong> +7 911 944 8000</li>
                     <li><strong>WhatsApp:</strong> +7 911 944 8000</li>
-                    <li><strong>Email:</strong> info@geosolutions.pro</li>
+                    <li><strong>Email:</strong> info@egrnkadastr.ru</li>
                     <li><strong>Адрес:</strong> СПб, Лиговский пр. д. 74 Д, оф. 5</li>
                 </ul>
             </section>

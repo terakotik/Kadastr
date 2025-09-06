@@ -75,7 +75,7 @@ export default function Header() {
                 <span className="sr-only">Открыть меню</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full h-full bg-background p-0 flex flex-col">
+            <SheetContent side="right" className="w-full h-full bg-background p-0 flex flex-col data-[state=open]:duration-300 data-[state=closed]:duration-300">
                <div className="flex flex-col h-full">
                   <div className="p-4 flex justify-between items-center border-b">
                     <Link href="#home" className="flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
@@ -115,9 +115,9 @@ export default function Header() {
                             <Phone className="w-4 h-4"/>
                             +7 911 944 8000
                         </a>
-                        <a href="mailto:info@geosolutions.pro" className="flex items-center justify-center gap-2 hover:text-primary">
+                        <a href="mailto:info@egrnkadastr.ru" className="flex items-center justify-center gap-2 hover:text-primary">
                             <Mail className="w-4 h-4"/>
-                            info@geosolutions.pro
+                            info@egrnkadastr.ru
                         </a>
                     </div>
                   </div>

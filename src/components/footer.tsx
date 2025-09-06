@@ -41,7 +41,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:info@geosolutions.pro" className="hover:text-primary">info@geosolutions.pro</a>
+                <a href="mailto:info@egrnkadastr.ru" className="hover:text-primary">info@egrnkadastr.ru</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
