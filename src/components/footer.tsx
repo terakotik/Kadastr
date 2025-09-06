@@ -52,7 +52,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                <span>Санкт‑Петербург, Лиговский пр., д. 74 Д, оф. 5</span>
+                <span>Санкт‑Петербург,<br/>Лиговский пр., д. 74 Д, оф. 5</span>
               </li>
             </ul>
              <Button 
