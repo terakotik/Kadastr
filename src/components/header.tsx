@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
-import AnimatedLogo from "./animated-logo";
 
 const navLinks = [
   { href: "#about", label: "Обо мне" },
@@ -40,7 +39,11 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between">
         <Link href="#home" className="flex items-center gap-3">
-          <AnimatedLogo className="h-12 w-12" />
+            <svg width="48" height="48" viewBox="0 0 100 100">
+                <rect x="5" y="5" width="90" height="90" fill="none" stroke="#4285F4" strokeWidth="6"></rect>
+                <rect x="20" y="20" width="60" height="60" fill="none" stroke="#ef4444" strokeWidth="8"></rect>
+                <circle cx="50" cy="50" r="5" fill="#ef4444"></circle>
+            </svg>
           <div>
             <span className="text-xl font-bold font-headline text-foreground leading-tight">
               Татьяна Иванова
@@ -61,10 +64,10 @@ export default function Header() {
         </nav>
         <div className="hidden lg:flex items-center gap-4">
           <Button asChild>
-            <Link href="#contacts">
+            <a href="tel:+79119448000">
               <Phone className="mr-2 h-4 w-4" />
               Связаться
-            </Link>
+            </a>
           </Button>
         </div>
         <div className="lg:hidden">
@@ -79,7 +82,11 @@ export default function Header() {
                <div className="flex flex-col h-full">
                   <div className="p-4 flex justify-between items-center border-b">
                     <Link href="#home" className="flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
-                        <AnimatedLogo className="h-10 w-10" />
+                        <svg width="40" height="40" viewBox="0 0 100 100">
+                            <rect x="5" y="5" width="90" height="90" fill="none" stroke="#4285F4" strokeWidth="6"></rect>
+                            <rect x="20" y="20" width="60" height="60" fill="none" stroke="#ef4444" strokeWidth="8"></rect>
+                            <circle cx="50" cy="50" r="5" fill="#ef4444"></circle>
+                        </svg>
                         <div>
                           <span className="text-lg font-bold font-headline text-foreground leading-tight">
                             Татьяна Иванова

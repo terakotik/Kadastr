@@ -1,10 +1,38 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Phone, MessageCircle, Send } from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+
 
 export default function HeroSection() {
+  const [phone, setPhone] = useState("");
+  const { toast } = useToast();
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!phone) {
+        toast({
+            variant: "destructive",
+            title: "Ошибка",
+            description: "Пожалуйста, введите номер телефона.",
+        });
+        return;
+    }
+    const message = `Здравствуйте! Нужна консультация. Мой номер: ${phone}`;
+    const whatsappUrl = `https://wa.me/79119448000?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+    setPhone("");
+    toast({
+      title: "Спасибо за ваш интерес!",
+      description: "Ваш чат в WhatsApp готов. Пожалуйста, отправьте сообщение.",
+    });
+  };
+
   return (
     <section id="home" className="relative bg-background overflow-hidden">
        <Image
@@ -27,25 +55,32 @@ export default function HeroSection() {
           <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-slate-200">
             Введите ваш номер телефона для консультации или свяжитесь с кадастровым инженером напрямую в чате WhatsApp или Telegram
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-             <Input type="tel" placeholder="Ваш номер телефона" className="h-12 text-lg text-center sm:text-left"/>
-             <Button size="lg" className="w-full sm:w-auto">
+          <form onSubmit={handleFormSubmit} className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+             <Input 
+                type="tel" 
+                placeholder="Ваш номер телефона" 
+                className="h-12 text-lg text-center sm:text-left"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+             <Button type="submit" size="lg" className="w-full sm:w-auto">
                 <Send className="mr-2 h-5 w-5"/>
                 Отправить
              </Button>
-          </div>
+          </form>
            <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
                <Button asChild variant="outline" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary w-full sm:w-auto">
-                  <Link href="https://wa.me/79119448000" target="_blank">
+                  <a href="https://wa.me/79119448000" target="_blank">
                      <MessageCircle className="mr-2 h-5 w-5"/>
                      WhatsApp
-                  </Link>
+                  </a>
                </Button>
                <Button asChild variant="outline" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary w-full sm:w-auto">
-                  <Link href="https://t.me/ваш_username" target="_blank">
+                  <a href="https://t.me/+79119448000" target="_blank">
                      <Send className="mr-2 h-5 w-5"/>
                      Telegram
-                  </Link>
+                  </a>
                </Button>
           </div>
         </div>

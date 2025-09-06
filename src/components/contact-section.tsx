@@ -18,7 +18,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useToast } from "@/hooks/use-toast"
-import { Loader2, CheckCircle, Send, MapPin } from "lucide-react"
+import { Send, MapPin, CheckCircle } from "lucide-react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
 
@@ -41,6 +41,8 @@ const formSchema = z.object({
   }),
 })
 
+type FormValues = z.infer<typeof formSchema>;
+
 const benefits = [
     { text: "Бесплатная консультация" },
     { text: "Расчёт стоимости в течение часа" },
@@ -49,7 +51,7 @@ const benefits = [
 
 export default function ContactSection() {
   const { toast } = useToast()
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -60,22 +62,33 @@ export default function ContactSection() {
     },
   })
 
-  const { formState: { isSubmitting } } = form;
+  function onSubmit(values: FormValues) {
+    const { name, phone, service, message } = values;
+    let whatsappMessage = `Здравствуйте!\n`;
+    whatsappMessage += `Имя: ${name}\n`;
+    whatsappMessage += `Телефон: ${phone}\n`;
+    if (service) {
+      whatsappMessage += `Услуга: ${service}\n`;
+    }
+    if (message) {
+      whatsappMessage += `Описание: ${message}\n`;
+    }
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    console.log(values)
+    const whatsappUrl = `https://wa.me/79119448000?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    window.open(whatsappUrl, "_blank");
+
     toast({
-      title: "Спасибо за заявку!",
-      description: "Я свяжусь с вами в ближайшее время, чтобы обсудить детали.",
-    })
-    form.reset()
+      title: "Спасибо за ваш интерес!",
+      description: "Ваш чат в WhatsApp готов. Пожалуйста, отправьте сообщение.",
+    });
+    form.reset();
   }
 
   return (
     <section id="contacts" className="py-20 lg:py-32 bg-secondary">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="text-center lg:text-left">
                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">Готовы начать <span className="text-primary">работу?</span></h2>
                  <p className="text-muted-foreground mt-4 text-lg">
@@ -176,21 +189,17 @@ export default function ContactSection() {
                             </FormItem>
                           )}
                         />
-                      <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
-                        {isSubmitting ? (
-                           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        ) : (
-                           <Send className="mr-2 h-4 w-4" />
-                        )}
+                      <Button type="submit" className="w-full" size="lg">
+                        <Send className="mr-2 h-4 w-4" />
                         Отправить заявку
                       </Button>
                     </form>
                   </Form>
                   <Button asChild variant="outline" className="w-full mt-4 md:hidden">
-                    <Link href="https://maps.app.goo.gl/JAH5HYs9MBh74Wk6A" target="_blank">
+                    <a href="https://maps.app.goo.gl/JAH5HYs9MBh74Wk6A" target="_blank">
                        <MapPin className="mr-2 h-4 w-4" />
                         Карта
-                    </Link>
+                    </a>
                   </Button>
                 </CardContent>
             </Card>
