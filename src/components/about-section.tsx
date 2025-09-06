@@ -25,14 +25,16 @@ export default function AboutSection() {
                     </div>
                  </div>
             </div>
-             <div className="order-1 lg:order-2 relative h-[600px]">
-                <Image
-                  src="http://egrnkadastr.ru/d/t.webp"
-                  alt="Кадастровая карта"
-                  fill
-                  data-ai-hint="map blueprint"
-                  className="object-contain object-bottom"
-                />
+             <div className="order-1 lg:order-2 relative h-[600px] overflow-hidden">
+                <div className="absolute inset-0 transform translate-y-[100px]">
+                    <Image
+                      src="http://egrnkadastr.ru/d/t.webp"
+                      alt="Кадастровая карта"
+                      fill
+                      data-ai-hint="map blueprint"
+                      className="object-contain object-bottom"
+                    />
+                </div>
             </div>
         </div>
       </div>
