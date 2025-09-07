@@ -43,7 +43,7 @@ export default function Header() {
             <AnimatedLogo />
           <div>
             <span className="text-xl font-bold font-headline text-foreground leading-tight">
-              Татьяна Иванова
+              Татьяна Тюрина
             </span>
             <p className="text-xs text-muted-foreground">Кадастровый инженер</p>
           </div>
@@ -86,7 +86,7 @@ export default function Header() {
                         </svg>
                         <div>
                           <span className="text-lg font-bold font-headline text-foreground leading-tight">
-                            Татьяна Иванова
+                            Татьяна Тюрина
                           </span>
                           <p className="text-xs text-muted-foreground">Кадастровый инженер</p>
                         </div>
@@ -119,9 +119,9 @@ export default function Header() {
                             <Phone className="w-4 h-4"/>
                             +7 911 944 8000
                         </a>
-                        <a href="mailto:info@egrnkadastr.ru" className="flex items-center justify-center gap-2 hover:text-primary">
+                        <a href="mailto:ttyurina0341@yandex.ru" className="flex items-center justify-center gap-2 hover:text-primary">
                             <Mail className="w-4 h-4"/>
-                            info@egrnkadastr.ru
+                            ttyurina0341@yandex.ru
                         </a>
                     </div>
                   </div>

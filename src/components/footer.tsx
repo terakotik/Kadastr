@@ -19,7 +19,7 @@ export default function Footer() {
                <AnimatedLogo />
                 <div>
                     <span className="text-xl font-bold font-headline text-foreground leading-tight">
-                        Татьяна Иванова
+                        Татьяна Тюрина
                     </span>
                     <p className="text-xs text-muted-foreground">Кадастровый инженер</p>
                 </div>
@@ -48,7 +48,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:info@egrnkadastr.ru" className="hover:text-primary">info@egrnkadastr.ru</a>
+                <a href="mailto:ttyurina0341@yandex.ru" className="hover:text-primary">ttyurina0341@yandex.ru</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
@@ -84,7 +84,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Татьяна Иванова. Все права защищены.</p>
+          <p>&copy; {new Date().getFullYear()} Татьяна Тюрина. Все права защищены.</p>
           <div className="flex gap-4 mt-4 sm:mt-0">
             <Link href="/privacy-policy" className="hover:text-primary">Политика конфиденциальности</Link>
           </div>

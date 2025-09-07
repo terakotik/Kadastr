@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
         <div className="space-y-6 text-muted-foreground">
             <section className="space-y-2">
                 <h2 className="text-2xl font-bold text-foreground">1. Общие положения</h2>
-                <p>Настоящая политика конфиденциальности (далее — «Политика») определяет порядок обработки персональных данных пользователей сайта egrnkadastr.ru (далее — «Сайт»), принадлежащего Татьяне Ивановой, кадастровому инженеру (далее — «Оператор»), в соответствии с Федеральным законом от 27.07.2006 N 152-ФЗ «О персональных данных» (далее — Закон о персональных данных).</p>
+                <p>Настоящая политика конфиденциальности (далее — «Политика») определяет порядок обработки персональных данных пользователей сайта egrnkadastr.ru (далее — «Сайт»), принадлежащего Татьяне Тюриной, кадастровому инженеру (далее — «Оператор»), в соответствии с Федеральным законом от 27.07.2006 N 152-ФЗ «О персональных данных» (далее — Закон о персональных данных).</p>
             </section>
             <section className="space-y-2">
                 <h2 className="text-2xl font-bold text-foreground">2. Основные понятия</h2>
@@ -88,7 +88,7 @@ export default function PrivacyPolicyPage() {
                  <ul className="list-none pl-0">
                     <li><strong>Телефон:</strong> +7 911 944 8000</li>
                     <li><strong>WhatsApp:</strong> +7 911 944 8000</li>
-                    <li><strong>Email:</strong> info@egrnkadastr.ru</li>
+                    <li><strong>Email:</strong> ttyurina0341@yandex.ru</li>
                     <li><strong>Адрес:</strong> СПб, Лиговский пр. д. 74 Д, оф. 5</li>
                 </ul>
             </section>
