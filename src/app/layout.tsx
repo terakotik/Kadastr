@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'GeoSolutions Pro',
-  description: 'Кадастровые услуги от Татьяны Ивановой. Оформление недвижимости — просто, быстро, надёжно.',
+  title: 'Кадастровый инженер в СПб и ЛО | Татьяна Иванова | egrnkadastr',
+  description: 'Профессиональные кадастровые и геодезические работы в Санкт-Петербурге и Ленинградской области. Кадастровый инженер Татьяна Иванова. Межевание, технические планы, консультации. egrnkadastr',
 };
 
 export default function RootLayout({
@@ -15,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className="scroll-smooth">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
